@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            border: 5px solid burlywood;
+            padding: 10px;
+            margin: 20px;
+        }
+        #div1,#div2,#div3,#randomdiv{
+            background-color: antiquewhite;
+        }
+        #anotherrandomdiv{
+            background: linear-gradient(honeydew,lavender);
+        }
+        body{
+            text-shadow: 1px 1px aliceblue;
+        }
+    </style>
+</head>
+<body>
+    <div id="anotherrandomdiv">
+        <div id="randomdiv">
+    <h1>Project</h1>
+    <h2>Methods and loops in Javscript</h2>
+    </div>
+    <div id="div1">
+   <p id="p2"></p>
+    </div>
+
+    <div id="div2">
+<p id="p3"></p>
+    </div>
+
+    <div id="div3">
+<p id="p4"></p>
+    </div>
+    </div>
+<script>
+var day = "";
+switch (new Date().getDay()) {
+case 0:
+day = "Saturday"
+break;
+case 1:
+day = "Sunday"
+break;
+case 2:
+day = "Monday"
+break;
+case 3:
+day = "Tuesday"
+break;
+case 4:
+day = "Wednesday"
+break;
+case 5:
+day = "Thursday"
+break;
+case 6:
+day = "Friday"
+break;
+}
+document.getElementById("p2").innerHTML = "Today is " + day;
+//for div2
+var randomNumbersText="Some random numbers are:<br><br>"
+    for (var i = 0; i < 4; i++) {
+        randomNumbersText += Math.random() + "<br>";
+    }
+    document.getElementById("p3").innerHTML = randomNumbersText;
+//for div3
+var a = Math.floor(Math.random() * 100);
+document.getElementById("p4").innerHTML="A rounded number is "+ a;
+    
+</script>
+</body>
+</html>
